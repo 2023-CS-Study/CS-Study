@@ -1,14 +1,9 @@
 ## ⭐OSI 7계층
 
----
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1843725a-a943-4fb7-8da1-6bd09326db66/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2e06f3b9-c403-4089-9ff2-bf7d938cf539/Untitled.png)
 
 ## 1. 물리 계층
 
----
+
 
 - 물리 계층에서 전송되는 데이터의 전기적인 신호화와 전송 매체의 기계적, 전기적 성질에 관여한다.
 
@@ -146,19 +141,17 @@
 
 - 각 패킷에는 가상회선 식별자가 포함되며 모든 패킷을 전송하면 가상회선이 해제되고 패킷들은 전송된 순서대로 도착하는 방식
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/00c35616-e7ca-404b-8663-960f371bb1fc/Untitled.png)
+
 
 ### **데이터그램 패킷 교환 방식**
 
 - 독립적으로 이동하며 최적의 경로를 선택하여 하나의 메시지에서 분할된 여러 패킷은 서로 다른 경로로 전송될 수 있다. → 순서가 다를 수 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b9e4259e-4bcd-41a1-b90c-12a68786c6a0/Untitled.png)
 
 ### TCP 연결 (3-웨이 핸드셰이크)
 
 ---
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/519c4ff8-244f-42e3-9987-d4bb94e99fa8/Untitled.png)
 
 - 단어
     
@@ -176,32 +169,28 @@
     
     `TCP Header`
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/64471cb3-24b7-4848-be34-d9043ebe8049/Untitled.png)
     
 
 TCP : 연결을 확립하기 위해 패킷 요청을 3번 요청하는 작업을 가진다.
 
 1. `SYN 단계` : CL서버는 ISN을 담아 서버에 연결 확립을 해달라고 요청(SYN한다.)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/593c59fe-3ac0-4454-94d2-83c96c1ec89a/Untitled.png)
 
 → SYNchronize 비트가 활성화 → 1로 바뀐 세그먼트를 전송한다.
 
 1. `SYN+ACK`:서버는 CL의 SYN 요청을 수신하고 서버의 ISN을 보내며 승인번호로 CL의 ISN+1을 보냄
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/728e4b65-fd27-4080-889d-43e3bc8d4767/Untitled.png)
+
 
 → ACK와 SYN이 1인 세그먼트를 CL에게 보낸다.
 
 1. ACK : 클라이언트는 서버의 ISN+1한 값인 승인번호를 담아 ACK를 서버로 보낸다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2441b1e8-44ea-4755-9d97-9214bd200a7e/Untitled.png)
+
 
  **TCP 해제 (4 -웨이 핸드셰이크)**
 
 ---
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/169b3c3b-07b2-49e6-90b5-11478a470b03/Untitled.png)
 
 <aside>
 💡 Time_WAIT이란 소켓이 바로 소멸되지 않고 일정 시간 유지되는 상태 → 지연 패킷 문제 해결
@@ -211,22 +200,21 @@ TCP : 연결을 확립하기 위해 패킷 요청을 3번 요청하는 작업을
 1. CL가 연결을 종료하겠다고 FIN 플래그를 전송한다.
     1. 이후 CL은 FIN_WAIT_1 상태로 돌아가고 서버의 응답을 기달린다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/48a94d8f-1478-45ba-bb35-4a08817d2f29/Untitled.png)
+
 
 1. 서버는 CL에게 ACK 승인 세그먼트를 보낸다.
     1. CLOSE_WAIT 상태에 들어간다.
     2. CL가 세그먼트를 반으면 FIN_WAIT_2 상태로 들어간다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/44cf912a-cf3b-4eca-8d22-7e77e8c16fa5/Untitled.png)
 
 1. 서버는 ACK를 보낸 이후에 일정 시간이 지나면 FIN세그먼트를 날린다.
     1. CL는 TIME_WAIT 상태가 된다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d773b0b4-1b49-40ee-8c2b-bf2e0abcc8e4/Untitled.png)
+
 
 1. CL는 서버로 다시 ACK를 보내 서버를 CLOSE 상태로 만들고 일정 시간 이후에는 CL과 서버의 연결이 해제된다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a882fe09-f8b4-44ff-a749-ba36d164dc4f/Untitled.png)
+
 
 ## 5. 세션 계층
 

@@ -104,3 +104,23 @@
  
 </details>
 
+<details>
+ <summary>Week 3</summary>
+ 
+1. **JWT , OAuth**
+
+2. **CORS , SOP**
+
+3. WebSocket과 [Socket.io](http://socket.io/)
+
+4. 서브넷 마스크와, 게이트웨이에 대해 설명해 주세요.
+
+5. 멀티플렉싱과 디멀티플렉싱에 대해 설명해 주세요.
+
+6.  XSS에 대해서 설명해 주세요.
+
+7. CIDR(사이더)
+
+8. Stateless와 Connectionless에 대해 설명해 주세요.
+ 
+</details>

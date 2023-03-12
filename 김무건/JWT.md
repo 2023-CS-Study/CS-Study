@@ -59,7 +59,8 @@ HMACSHA256(
   secret)
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/29f66683-08e3-4cf4-a4d9-70c61bc462a8/Untitled.png)
+![image](https://user-images.githubusercontent.com/103854287/224526675-83bd803d-e668-4210-89b9-d84b6c843905.png)
+
 
 ## JWT 동작
 
@@ -67,7 +68,8 @@ HMACSHA256(
 
 JWT를 발급받은 클라이언트는 이를 HTTP 요청의 Authorization 헤더에 포함하여 서버에 전송합니다. 이후 서버는 받은 JWT를 디코딩하여 사용자 정보와 클레임 정보를 확인합니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aea1b840-4b1e-47a7-ace5-67a7892ecf0a/Untitled.png)
+![image](https://user-images.githubusercontent.com/103854287/224526668-aa4fc8df-d6c0-4065-9940-56dd25cdc1cf.png)
+
 
 
 ### JWT의 작동 과정
